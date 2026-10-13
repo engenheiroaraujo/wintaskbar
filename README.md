@@ -3,6 +3,30 @@
 Personaliza a barra de tarefas do Windows 11 x64 com uma Dock flutuante,
 cantos arredondados, blur e uma Tray separada para relógio e ícones do sistema.
 
+## Aviso
+
+Leia antes de usar:
+
+- **API não documentada.** O projeto usa o diagnóstico XAML do Windows
+  (`InitializeXamlDiagnosticsEx`) para estilizar a barra. Uma atualização do
+  Windows pode mudar a árvore de elementos e fazer o tema deixar de ser aplicado
+  ou aplicar só em parte.
+- **Versão testada.** Windows 11 x64, build **26300**. Outras versões não foram
+  verificadas.
+- **O Explorer é reiniciado.** Aplicar, desativar e sair reiniciam o
+  `explorer.exe`: a barra e a área de trabalho somem por instantes e janelas do
+  Explorador de Arquivos podem fechar.
+- **Binários sem assinatura.** O SmartScreen ou o antivírus podem avisar sobre
+  um programa que carrega uma DLL no Explorer. Confira os arquivos e, se preferir,
+  compile você mesmo.
+- **Sem garantia.** O projeto é distribuído sob a licença MIT, no estado em que
+  está. Para experimentar com segurança, use primeiro uma máquina virtual.
+- **Como voltar ao normal.** **Desativar tema** ou **Sair e restaurar a barra**
+  no menu da bandeja devolvem a barra original; a desinstalação faz o mesmo.
+
+O projeto não é afiliado nem endossado pela Microsoft. Para relatar uma
+vulnerabilidade, veja [SECURITY.md](SECURITY.md).
+
 ## Aparência
 
 A Dock e a Tray ficam como duas superfícies separadas, com blur, cantos

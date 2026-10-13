@@ -1,0 +1,10 @@
+bin/
+tap/build/
+*.exe
+*.dll
+.toolchain/
+
+CLAUDE.md
+CONTEXT.md
+.obsidian/
+docs/segundo-cerebro/

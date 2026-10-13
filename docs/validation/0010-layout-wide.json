@@ -1,0 +1,51 @@
+{
+    "Time":  "2026-10-12T20:02:02.5565237-04:00",
+    "TaskbarX":  0,
+    "TaskbarWidth":  2560,
+    "AppElements":  18,
+    "Frame":  {
+                  "Kind":  "Frame",
+                  "Class":  "Taskbar.TaskbarFrameAutomationPeer",
+                  "Id":  "TaskbarFrame",
+                  "Name":  "",
+                  "X":  837,
+                  "Right":  1724,
+                  "Width":  887,
+                  "Offscreen":  false
+              },
+    "Overflow":  null,
+    "Tray":  {
+                 "Kind":  "Tray",
+                 "Class":  "TrayNotifyWnd",
+                 "Id":  "",
+                 "Name":  "",
+                 "X":  2321,
+                 "Right":  2560,
+                 "Width":  239,
+                 "Offscreen":  false
+             },
+    "FirstNormalButton":  {
+                              "Kind":  "NormalButton",
+                              "Class":  "SystemTray.NormalButton",
+                              "Id":  "SystemTrayIcon",
+                              "Name":  "Mostrar Ícones Ocultos Mostrar ícones ocultos",
+                              "X":  2333,
+                              "Right":  2365,
+                              "Width":  32,
+                              "Offscreen":  false
+                          },
+    "ShowDesktop":  {
+                        "Kind":  "ShowDesktop",
+                        "Class":  "SystemTray.ShowDesktopButton",
+                        "Id":  "SystemTrayIcon",
+                        "Name":  "Mostrar Área de Trabalho Mostrar área de trabalho",
+                        "X":  2536,
+                        "Right":  2548,
+                        "Width":  12,
+                        "Offscreen":  false
+                    },
+    "OverflowGap":  null,
+    "OverflowBeforeTray":  null,
+    "FrameCenterOffset":  0.5,
+    "ShowDesktopVisible":  true
+}

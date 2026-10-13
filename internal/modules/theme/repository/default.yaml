@@ -1,0 +1,89 @@
+# Default Theme do wintaskbar: vidro neutro.
+#
+# variables: valores reutilizáveis, referenciados nas regras como $Nome.
+# rules: cada regra tem um selector (quais elementos) e styles (o que muda).
+# Um valor que começa com < é um objeto XAML; <Blur> é o fundo desfocado.
+
+name: default
+
+variables:
+  # Espaço igual acima e abaixo das duas superfícies, em pixels independentes de dispositivo.
+  VerticalGap: '1'
+  # Folga mínima entre a Dock e a Tray (layout adaptativo da Dock).
+  DockTrayGap: '12'
+
+  Radius: '12'
+  RadiusSmall: '8'
+  EdgeWidth: '1'
+
+  # Vidro: desfoque com tinta que acompanha o tema claro/escuro do Windows, para o
+  # texto e os ícones sempre terem contraste com o fundo.
+  Glass: '<Blur Amount="28" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.30" />'
+  # Borda de luz: mais clara no alto, quase some embaixo.
+  Edge: '<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#55FFFFFF" Offset="0" /><GradientStop Color="#1AFFFFFF" Offset="1" /></LinearGradientBrush>'
+
+rules:
+  # A Dock: a pílula de vidro que abraça os ícones.
+  - selector: 'Taskbar.TaskbarFrame > Grid#RootGrid'
+    styles:
+      Margin: '0,$VerticalGap,0,$VerticalGap'
+      BorderThickness: '$EdgeWidth'
+      BorderBrush: '$Edge'
+      CornerRadius: '$Radius'
+      Background: '$Glass'
+      Padding: '4,0,4,0'
+
+  # O quadro da Dock: centralizado, do tamanho dos ícones, com o layout adaptativo.
+  - selector: 'Taskbar.TaskbarFrame'
+    styles:
+      DockLayoutGap: '$DockTrayGap'
+      HorizontalAlignment: 'Center'
+      Width: 'Auto'
+
+  # A Tray: a segunda pílula, com o relógio e os ícones do sistema.
+  - selector: 'StackPanel#SystemTrayFrameGrid, Grid#SystemTrayFrameGrid'
+    styles:
+      Margin: '8,$VerticalGap,12,$VerticalGap'
+      BorderThickness: '$EdgeWidth'
+      BorderBrush: '$Edge'
+      CornerRadius: '$Radius'
+      Background: '$Glass'
+      BackgroundSizing: 'InnerBorderEdge'
+
+  - selector: 'SystemTray.SystemTrayFrame'
+    styles:
+      HorizontalAlignment: 'Right'
+      Width: 'Auto'
+
+  # O fundo nativo de ponta a ponta sai: quem desenha o fundo são as duas pílulas.
+  - selector: 'Taskbar.TaskbarBackground#BackgroundControl > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Shapes.Rectangle#BackgroundFill'
+    styles:
+      Visibility: 'Collapsed'
+  - selector: 'Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill'
+    styles:
+      Visibility: 'Collapsed'
+  - selector: 'Rectangle#BackgroundStroke'
+    styles:
+      Visibility: 'Collapsed'
+  - selector: 'Taskbar.TaskbarBackground#HoverFlyoutBackgroundControl > Grid > Rectangle#BackgroundFill'
+    styles:
+      Fill: 'Transparent'
+
+  # Realce dos botões: cantos arredondados no mesmo ritmo das pílulas.
+  - selector: 'Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Controls.Border#BackgroundElement, Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Windows.UI.Xaml.Controls.Border#BackgroundElement'
+    styles:
+      CornerRadius: '$RadiusSmall'
+  - selector: 'SystemTray.ChevronIconView, SystemTray.NotifyIconView#NotifyItemIcon, SystemTray.OmniButton#ControlCenterButton, SystemTray.OmniButton#NotificationCenterButton'
+    styles:
+      CornerRadius: '$RadiusSmall'
+  - selector: 'SystemTray.ChevronIconView > Grid#ContainerGrid > Border#BackgroundBorder, SystemTray.NotifyIconView > Grid#ContainerGrid > Border#BackgroundBorder'
+    styles:
+      CornerRadius: '$RadiusSmall'
+
+  # Flyouts, menus de contexto e dicas: o mesmo vidro das pílulas.
+  - selector: 'Windows.UI.Xaml.Controls.Border#OverflowFlyoutBackgroundBorder, Windows.UI.Xaml.Controls.MenuFlyoutPresenter > Windows.UI.Xaml.Controls.Border, Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot'
+    styles:
+      Background: '$Glass'
+      BorderBrush: '$Edge'
+      BorderThickness: '$EdgeWidth'
+      CornerRadius: '$Radius'

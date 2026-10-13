@@ -1,0 +1,60 @@
+{
+    "Time":  "2026-10-12T20:03:11.0303646-04:00",
+    "TaskbarX":  0,
+    "TaskbarWidth":  1154,
+    "AppElements":  16,
+    "Frame":  {
+                  "Kind":  "Frame",
+                  "Class":  "Taskbar.TaskbarFrameAutomationPeer",
+                  "Id":  "TaskbarFrame",
+                  "Name":  "",
+                  "X":  50,
+                  "Right":  903,
+                  "Width":  853,
+                  "Offscreen":  false
+              },
+    "Overflow":  {
+                     "Kind":  "Overflow",
+                     "Class":  "ToggleButton",
+                     "Id":  "OverflowButton",
+                     "Name":  "Menu de Estouro da Barra de Ferramentas",
+                     "X":  851,
+                     "Right":  898,
+                     "Width":  47,
+                     "Offscreen":  false
+                 },
+    "Tray":  {
+                 "Kind":  "Tray",
+                 "Class":  "TrayNotifyWnd",
+                 "Id":  "",
+                 "Name":  "",
+                 "X":  915,
+                 "Right":  1154,
+                 "Width":  239,
+                 "Offscreen":  false
+             },
+    "FirstNormalButton":  {
+                              "Kind":  "NormalButton",
+                              "Class":  "SystemTray.NormalButton",
+                              "Id":  "SystemTrayIcon",
+                              "Name":  "Mostrar Ícones Ocultos Mostrar ícones ocultos",
+                              "X":  927,
+                              "Right":  959,
+                              "Width":  32,
+                              "Offscreen":  false
+                          },
+    "ShowDesktop":  {
+                        "Kind":  "ShowDesktop",
+                        "Class":  "SystemTray.ShowDesktopButton",
+                        "Id":  "SystemTrayIcon",
+                        "Name":  "Mostrar Área de Trabalho Mostrar área de trabalho",
+                        "X":  1130,
+                        "Right":  1142,
+                        "Width":  12,
+                        "Offscreen":  false
+                    },
+    "OverflowGap":  17,
+    "OverflowBeforeTray":  true,
+    "FrameCenterOffset":  -100.5,
+    "ShowDesktopVisible":  true
+}

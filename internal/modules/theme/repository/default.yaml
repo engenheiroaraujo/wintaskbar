@@ -14,21 +14,16 @@ variables:
 
   Radius: '12'
   RadiusSmall: '8'
-  EdgeWidth: '1'
 
-  # Vidro: desfoque com tinta que acompanha o tema claro/escuro do Windows, para o
-  # texto e os ícones sempre terem contraste com o fundo.
-  Glass: '<Blur Amount="28" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.30" />'
-  # Borda de luz: mais clara no alto, quase some embaixo.
-  Edge: '<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#55FFFFFF" Offset="0" /><GradientStop Color="#1AFFFFFF" Offset="1" /></LinearGradientBrush>'
+  # Vidro: desfoque com tinta leve que acompanha o tema claro/escuro do Windows.
+  # Quanto maior o TintOpacity, mais opaco (leitoso) fica o vidro.
+  Glass: '<Blur Amount="20" TintColor="{ThemeResource SystemChromeAltHighColor}" TintOpacity="0.12" />'
 
 rules:
   # A Dock: a pílula de vidro que abraça os ícones.
   - selector: 'Taskbar.TaskbarFrame > Grid#RootGrid'
     styles:
       Margin: '0,$VerticalGap,0,$VerticalGap'
-      BorderThickness: '$EdgeWidth'
-      BorderBrush: '$Edge'
       CornerRadius: '$Radius'
       Background: '$Glass'
       Padding: '4,0,4,0'
@@ -44,8 +39,6 @@ rules:
   - selector: 'StackPanel#SystemTrayFrameGrid, Grid#SystemTrayFrameGrid'
     styles:
       Margin: '8,$VerticalGap,12,$VerticalGap'
-      BorderThickness: '$EdgeWidth'
-      BorderBrush: '$Edge'
       CornerRadius: '$Radius'
       Background: '$Glass'
       BackgroundSizing: 'InnerBorderEdge'
@@ -84,6 +77,4 @@ rules:
   - selector: 'Windows.UI.Xaml.Controls.Border#OverflowFlyoutBackgroundBorder, Windows.UI.Xaml.Controls.MenuFlyoutPresenter > Windows.UI.Xaml.Controls.Border, Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot'
     styles:
       Background: '$Glass'
-      BorderBrush: '$Edge'
-      BorderThickness: '$EdgeWidth'
       CornerRadius: '$Radius'

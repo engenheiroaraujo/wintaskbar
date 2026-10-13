@@ -64,8 +64,8 @@ int main(int argc, char** argv) {
         auto const& dock = theme.rules.front();
         Check(dock.alts[0].size() == 2 && dock.alts[0][1].name == L"RootGrid", "selector hierarchy");
         Check(dock.alts[0][1].typeNames[0] == L"Windows.UI.Xaml.Controls.Grid", "expanded class names");
-        auto const& blur = dock.styles[4];
-        Check(blur.kind == L"blur" && blur.amount == 28 && blur.alpha == 77 && blur.fallback == 0x4D202020 && blur.themeKey == L"SystemChromeAltHighColor", "blur parameters");
+        auto const& blur = dock.styles[2];
+        Check(blur.kind == L"blur" && blur.amount == 20 && blur.alpha == 31 && blur.fallback == 0x1F202020 && blur.themeKey == L"SystemChromeAltHighColor", "blur parameters");
         Check(theme.rules[2].alts.size() == 2, "selector alternatives");
         bool hasLayout = false;
         for (auto const& rule : theme.rules) for (auto const& style : rule.styles)

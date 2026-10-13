@@ -5,10 +5,8 @@ alt
 c	Taskbar.TaskbarFrame	
 c	Windows.UI.Xaml.Controls.Grid|Windows.UI.Xaml.Shapes.Grid|Windows.UI.Xaml.Controls.Primitives.Grid|Windows.UI.Xaml.Grid	RootGrid
 style	Margin	plain	0,1,0,1
-style	BorderThickness	plain	1
-style	BorderBrush	xaml	<LinearGradientBrush xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#55FFFFFF" Offset="0" /><GradientStop Color="#1AFFFFFF" Offset="1" /></LinearGradientBrush>
 style	CornerRadius	plain	12
-style	Background	blur	28	SystemChromeAltHighColor	77	4D202020
+style	Background	blur	20	SystemChromeAltHighColor	31	1F202020
 style	Padding	plain	4,0,4,0
 rule	Taskbar.TaskbarFrame
 alt
@@ -22,10 +20,8 @@ c	Windows.UI.Xaml.Controls.StackPanel|Windows.UI.Xaml.Shapes.StackPanel|Windows.
 alt
 c	Windows.UI.Xaml.Controls.Grid|Windows.UI.Xaml.Shapes.Grid|Windows.UI.Xaml.Controls.Primitives.Grid|Windows.UI.Xaml.Grid	SystemTrayFrameGrid
 style	Margin	plain	8,1,12,1
-style	BorderThickness	plain	1
-style	BorderBrush	xaml	<LinearGradientBrush xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#55FFFFFF" Offset="0" /><GradientStop Color="#1AFFFFFF" Offset="1" /></LinearGradientBrush>
 style	CornerRadius	plain	12
-style	Background	blur	28	SystemChromeAltHighColor	77	4D202020
+style	Background	blur	20	SystemChromeAltHighColor	31	1F202020
 style	BackgroundSizing	plain	InnerBorderEdge
 rule	SystemTray.SystemTrayFrame
 alt
@@ -94,8 +90,6 @@ c	Windows.UI.Xaml.Controls.Border
 alt
 c	Windows.UI.Xaml.Controls.ToolTip	
 c	Windows.UI.Xaml.Controls.ContentPresenter	LayoutRoot
-style	Background	blur	28	SystemChromeAltHighColor	77	4D202020
-style	BorderBrush	xaml	<LinearGradientBrush xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#55FFFFFF" Offset="0" /><GradientStop Color="#1AFFFFFF" Offset="1" /></LinearGradientBrush>
-style	BorderThickness	plain	1
+style	Background	blur	20	SystemChromeAltHighColor	31	1F202020
 style	CornerRadius	plain	12
 end

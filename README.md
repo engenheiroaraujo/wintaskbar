@@ -14,7 +14,7 @@ arredondados e borda em gradiente (Theme padrão `default`, tema claro do Window
 
 ![Tray com o relógio e o menu de ícones ocultos](docs/images/tray.png)
 
-https://github.com/user-attachments/assets/4f09fac8-91bf-4a5b-b2f7-cbbf65e4b1ff
+https://github.com/user-attachments/assets/53ea31ab-684c-4abb-8065-12da6ad2ddd6
 
 ## Desempenho
 
